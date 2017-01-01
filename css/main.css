@@ -1,0 +1,23 @@
+#imgWrap {
+	width: 800px;
+	height: 480px;
+	margin: 30px auto;
+	perspective: 800px;
+}
+#imgWrap img {
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+#btn{
+	width: 100px;
+	text-align: center;
+	font: 16px/40px "微软雅黑";
+	color: #ff;
+	padding: 0 20px;
+	background: greenyellow;
+	margin: 0 auto;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
