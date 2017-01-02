@@ -2,6 +2,7 @@ window.onload = function() {
 	var btn = document.getElementById("btn");
 	var imgs = document.querySelectorAll("img");
 	var isMoving = false;
+
 	btn.onclick = function() {
 		if (isMoving) {
 			return ;
@@ -22,7 +23,19 @@ window.onload = function() {
 							endNum++;
 							if (endNum === imgs.length) {
 								endNum = 0;
-								toBig();
+								
+								var arr = [];
+								for (var i = 1; i <= imgs.length; i++) {
+									arr[i] = i;
+								}
+								arr.sort(function() {
+									return 0.5 - Math.random();
+								})
+								for (var i = 0; i < imgs.length; i++) {
+									imgs[i].src = `img/${arr[i]}.jpg`;
+								}
+		
+								toCircle();
 							}
 						});
 					});
@@ -43,7 +56,7 @@ window.onload = function() {
 			}, false);
 		}
 		
-		function toBig() {
+		function toCircle() {
 			for (var i = 0; i < imgs.length; i++) {
 				imgs[i].style.transition = '';
 				imgs[i].style.transform = `rotateY(0deg) translateZ(${-Math.random() * 1000}px)`;
