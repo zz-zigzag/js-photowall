@@ -76,5 +76,6 @@ window.onload = function() {
 			}
 		}
 	};
+	btn.onclick();
 	setInterval(btn.onclick, 5000);
 }
